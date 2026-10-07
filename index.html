@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Mandu's Grammar Diary</title>
+    <meta name="description" content="A cute, interactive Korean grammar game. Learn the most important patterns in the order you need them, one stamp at a time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Jua&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="app"><p style="padding:24px">Loading Mandu's Grammar Diary…</p></div>
+    <noscript><p style="padding:24px">This game needs JavaScript turned on.</p></noscript>
+
+    <!-- engine -->
+    <script src="js/hangul.js"></script>
+    <script src="js/art.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/audio.js"></script>
+
+    <!-- content: add new level files here, in order -->
+    <script src="js/content/course.js"></script>
+    <script src="js/content/level1.js"></script>
+    <script src="js/content/level2.js"></script>
+    <script src="js/content/level3.js"></script>
+
+    <!-- game -->
+    <script src="js/labs.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
