@@ -27,7 +27,7 @@ Progress is saved in your browser (localStorage). It never leaves your device.
 | 하나 · First Steps | Noun sentences | 1-1 이에요/예요 · 1-2 은/는 · 1-3 이/가 아니에요 · 1-4 이/가 있어요/없어요 · pop quiz |
 | 둘 · On the Move | Verb sentences | 2-1 -아요/어요/해요 · 2-2 을/를 · 2-3 에 vs 에서 · 2-4 안 / -지 않아요 · pop quiz |
 | 셋 · Time Travel | Tenses and wishes | 3-1 -았/었어요 · 3-2 -(으)ㄹ 거예요 · 3-3 -고 싶어요 · pop quiz |
-| 넷 to 아홉 | On the roadmap | particles (도, 의, 하고, (으)로, 에게…), linking (-고, -지만, -아서), can/please, plans, describing, irregular verbs |
+| 넷 to 아홉 | On the roadmap | particles (도, 의, 하고, (으)로, 에게…), irregular verbs and ㄹ-drop, linking (-고, -지만, -아서, -(으)면), can/please, plans, describing |
 
 ### How a lesson plays
 
