@@ -205,7 +205,8 @@
       h("p", { text: "The order learners usually meet these patterns. Each will become its own level." }),
       h("div", { class: "road-grid" }, list.map((r) =>
         h("div", { class: "road-card", style: "--lvl:" + lvl(r.id) },
-          h("h3", {}, h("span", { class: "ko", text: r.num }), r.title, " ", h("small", { class: "ko", text: r.ko })),
+          h("h3", {}, h("span", { class: "ko", text: r.num }), r.title),
+          h("p", { class: "road-ko ko", text: r.ko }),
           h("ul", {}, r.patterns.map((p) => h("li", { class: "ko", html: md(p) })))))));
   }
 

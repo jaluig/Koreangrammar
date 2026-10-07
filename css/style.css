@@ -855,6 +855,13 @@ mark.hl[data-gloss].show::after {
   text-align: center;
 }
 
+.road-card .road-ko {
+  margin-top: 2px;
+  color: var(--ink-2);
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+}
+
 .road-card ul {
   margin: 6px 0 0;
   padding-left: 18px;

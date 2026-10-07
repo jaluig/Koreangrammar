@@ -22,7 +22,9 @@ let page = read("index.html")
 if (artifact) {
   const head = page.match(/<head>([\s\S]*?)<\/head>/)[1]
     .replace(/<meta charset[^>]*>\s*/i, "")
-    .replace(/<meta name="viewport"[^>]*>\s*/i, "");
+    .replace(/<meta name="viewport"[^>]*>\s*/i, "")
+    .replace(/<link rel="icon"[^>]*>\s*/i, "")
+    .replace(/<meta name="theme-color"[^>]*>\s*/i, "");
   const body = page.match(/<body>([\s\S]*?)<\/body>/)[1];
   page = head.trim() + "\n" + body.trim() + "\n";
 }

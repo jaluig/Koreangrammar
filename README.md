@@ -7,6 +7,8 @@ the stamp Korean teachers press into kids' diaries.
 
 This is a **prototype**: three playable levels (11 lessons + 3 pop quizzes) and a roadmap for what comes next.
 
+![The diary map, the 받침 Detector lab, and a 참 잘했어요 stamp](docs/preview.png)
+
 ## Play it
 
 No install and no build step. Open `index.html` in any modern browser (double-clicking it works).

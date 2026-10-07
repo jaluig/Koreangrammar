@@ -182,6 +182,27 @@ test("pop quizzes are well formed", () => {
   }
 });
 
+test("highlighted particles in the text follow the 받침 rule", () => {
+  const PAIR_OF = { 이에요: PAIRS[0], 예요: PAIRS[0], 은: PAIRS[1], 는: PAIRS[1], 이: PAIRS[2], 가: PAIRS[2], 을: PAIRS[3], 를: PAIRS[3], 이었어요: PAIRS[4], 였어요: PAIRS[4] };
+  for (const s of strings(levels)) {
+    // e.g. 학생{이에요}, 저{는}, 물{이 아니에요}, 준호 씨{는요}?
+    for (const m of s.matchAll(/([가-힣]+)\{(이에요|예요|이었어요|였어요|은|는|이|가|을|를)(?=[ }요])/g)) {
+      assert.equal(H.pick(m[1], PAIR_OF[m[2]]), m[2], "wrong particle in “" + s + "”: " + m[1] + " takes " + H.pick(m[1], PAIR_OF[m[2]]));
+    }
+  }
+});
+
+test("verb forms written as “X다 → Y” match the conjugation engine", () => {
+  for (const s of strings(levels)) {
+    for (const m of s.replace(/[{}*]/g, "").matchAll(/([가-힣]+다) → ([가-힣]+(?: 거예요| 싶어요)?)/g)) {
+      const [, verb, form] = m;
+      const forms = ["present", "past", "future", "want", "negative"].map((mode) => H.conjugate(verb, mode).form);
+      const ok = forms.includes(form) || verb.startsWith(form); // a stem, e.g. 먹다 → 먹
+      assert.ok(ok, verb + " → " + form + " doesn't match the engine (" + forms.join(", ") + "). If the verb is irregular, add it to IRREGULAR in js/hangul.js.");
+    }
+  }
+});
+
 test("roadmap and tool lists are usable", () => {
   for (const r of KG.course.roadmap) assert.ok(r.title && r.patterns.length, "roadmap level " + r.id);
   for (const [w] of KG.course.toolNouns) assert.ok(H.lastBlock(w), "tool noun " + w);
