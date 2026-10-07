@@ -34,8 +34,8 @@ KG.addLevel({
           blocks: [
             { p: "Every verb and adjective in the dictionary ends in **다**: 가다 (*to go*), 먹다 (*to eat*), 하다 (*to do*). Chop off 다 and what's left is the **stem**." },
             { table: { head: ["Dictionary form", "Stem", "Polite present"], rows: [["가다", "가", "{가요}"], ["먹다", "먹", "{먹어요}"], ["하다", "하", "{해요}"]] } },
-            { p: "To talk politely, add **아요**, **어요** or **해요** to the stem. Which one? It depends on the **last vowel of the stem**." },
-            { formula: "Stem + {아요 / 어요 / 해요}" },
+            { p: "To talk politely, add **아요** or **어요** to the stem, and 하다 verbs simply become **해요**. Which one? It depends on the **last vowel of the stem**." },
+            { formula: "Stem + {아요 / 어요}" },
           ],
         },
         {
@@ -53,11 +53,11 @@ KG.addLevel({
             { table: { head: ["Last vowel of the stem", "Add", "Examples"], rows: [
               ["ㅏ or ㅗ", "{아요}", "살다 → 살아요 (*live*) · 좋다 → 좋아요 (*be good*)"],
               ["any other vowel", "{어요}", "먹다 → 먹어요 (*eat*) · 읽다 → 읽어요 (*read*)"],
-              ["하다", "{해요}", "하다 → 해요 (*do*) · 공부하다 → 공부해요 (*study*)"],
+              ["하다", "하 → {해요}", "하다 → 해요 (*do*) · 공부하다 → 공부해요 (*study*)"],
             ] } },
             { tip: "You already know two! **있어요 / 없어요** are just 있다 / 없다 + 어요." },
             { p: "Adjectives follow exactly the same rules. In Korean they act like verbs, so there's no separate word for *is*: 좋다 → **좋아요** (*it's good*), 작다 → **작아요** (*it's small*)." },
-            { reveal: { q: "Deep dive: why bright and dark vowels?", a: "It's called **vowel harmony** (모음조화). ㅏ and ㅗ are *bright* (양성) vowels; the rest are *dark* (음성). Endings that start with 아/어 copy the stem's brightness. You'll see this 아/어 choice again in the past tense and in many later patterns, so it's worth getting comfy with now." } },
+            { reveal: { q: "Deep dive: why bright and dark vowels?", a: "It's called **vowel harmony** (모음조화). ㅏ and ㅗ count as *bright* (양성) vowels; for this rule, every other vowel acts *dark* and takes 어. Endings that start with 아/어 copy the stem's brightness. You'll see this 아/어 choice again in the past tense and in many later patterns, so it's worth getting comfy with now." } },
           ],
         },
         {
@@ -258,6 +258,7 @@ KG.addLevel({
           en: "I watch a movie.",
           tiles: ["저는", "영화를", "봐요."],
           extra: ["영화을"],
+          alt: ["영화를 저는 봐요.", "영화를 봐요."],
           explain: "Topic → object → verb. 영**화** ends in a vowel → **를**.",
         },
         {
@@ -271,7 +272,7 @@ KG.addLevel({
           type: "learn",
           title: "Sneaky objects",
           blocks: [
-            { p: "Some verbs take 을/를 in Korean even when English uses *with*, *to* or no object at all:" },
+            { p: "These everyday verbs all take 을/를. Two of them surprise English speakers: you meet *with* a friend and get *on* a bus, but in Korean both are plain objects." },
             { table: { head: ["Korean", "English"], rows: [
               ["친구{를} 만나요", "I meet (with) a friend"],
               ["버스{를} 타요", "I take / ride the bus"],
@@ -400,6 +401,7 @@ KG.addLevel({
           en: "I study at the library.",
           tiles: ["저는", "도서관에서", "공부해요."],
           extra: ["도서관에"],
+          alt: ["도서관에서 저는 공부해요.", "도서관에서 공부해요."],
           explain: "Studying is an action → **에서**.",
         },
         {
@@ -590,6 +592,7 @@ KG.addLevel({
         en: "Minji doesn't watch movies.",
         tiles: ["민지 씨는", "영화를", "안", "봐요."],
         extra: ["영화을", "에서"],
+        alt: ["영화를 민지 씨는 안 봐요."],
         explain: "Object + 를, then **안** right before the verb.",
       },
       {

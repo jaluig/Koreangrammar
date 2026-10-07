@@ -104,6 +104,7 @@ KG.addLevel({
           en: "I watched a movie yesterday.",
           tiles: ["어제", "영화를", "봤어요."],
           extra: ["봐요.", "봤아요."],
+          alt: ["영화를 어제 봤어요."],
           explain: "보다 → 봐요 → **봤어요**.",
         },
         {
@@ -143,7 +144,7 @@ KG.addLevel({
           q: "A Korean coworker asks **밥 먹었어요?** What do they mean?",
           options: ["Have you eaten? (a friendly hello)", "Do you want to eat with me right now?", "Did you cook rice?"],
           answer: 0,
-          explain: "It's a caring greeting. Just answer **네, 먹었어요!** or **아직이요** (*not yet*).",
+          explain: "It's a caring greeting. Just answer **네, 먹었어요!** or **아직 안 먹었어요** (*not yet*).",
         },
         {
           type: "match",
@@ -292,7 +293,7 @@ KG.addLevel({
               ["민지 씨는 집에 {있을 거예요}.", "Minji is probably at home."],
             ] },
             { tip: "Handy time words: **내일** (*tomorrow*), **주말에** (*on the weekend*), **다음 주에** (*next week*), **나중에** (*later*)." },
-            { reveal: { q: "Deep dive: what is 거?", a: "거 is the casual form of **것** (*thing*). So 갈 거예요 is literally *it's a going-to-go thing*. In formal writing you'll see **갈 것입니다**." } },
+            { reveal: { q: "Deep dive: what is 거?", a: "거 is the spoken form of **것** (*thing*). So 갈 거예요 is literally *it's a going-to-go thing*. In formal writing you'll see **갈 것입니다**." } },
             { reveal: { q: "Deep dive: the present tense for plans", a: "For fixed plans, Koreans often just use the present: **내일 가요** (*I'm going tomorrow*). -(으)ㄹ 거예요 adds a feeling of intention or prediction." } },
           ],
         },
@@ -301,6 +302,7 @@ KG.addLevel({
           en: "I'm going to study at home tomorrow.",
           tiles: ["내일", "집에서", "공부할", "거예요."],
           extra: ["집에", "공부을"],
+          alt: ["집에서 내일 공부할 거예요."],
           explain: "Studying is an action → 집**에서**. 공부하 → **공부할** 거예요.",
         },
         {
@@ -373,7 +375,7 @@ KG.addLevel({
               ["past", "가고 {싶었어요}", "I wanted to go"],
               ["negative", "가고 {싶지 않아요}", "I don't want to go"],
             ] } },
-            { warn: "싶어요 needs a **verb** in front of it. To want a thing, add a verb: ~~커피 싶어요~~ → 커피를 **마시고** 싶어요." },
+            { warn: "싶어요 needs an **action verb** in front of it, not a noun or an adjective. To want a thing, add a verb: ~~커피 싶어요~~ → 커피를 **마시고** 싶어요." },
             { tip: "The most famous K-drama line: **보고 싶어요**. Literally *I want to see you*; really *I miss you*." },
           ],
         },
@@ -457,7 +459,7 @@ KG.addLevel({
         examples: [["한국에 가고 싶어요.", "I want to go to Korea."], ["뭐 먹고 싶어요?", "What do you want to eat?"], ["보고 싶어요.", "I miss you."]],
         tips: [
           "No 받침 or vowel rules at all.",
-          "Needs a verb: 커피를 마시고 싶어요.",
+          "Needs an action verb: 커피를 마시고 싶어요.",
           "Someone else: -고 싶어 해요.",
           "Negative: 가고 싶지 않아요.",
         ],

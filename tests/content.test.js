@@ -50,6 +50,14 @@ function checkParticleBlank(where, card) {
   assert.equal(card.options[card.answer], H.pick(m[1], pair), where + ": particle answer disagrees with the 받침 rule for " + m[1]);
 }
 
+// Can `target` be made by joining some of the tiles with spaces? Tiles may contain spaces ("민지 씨는").
+function canBuild(target, tiles) {
+  if (target === "") return true;
+  return tiles.some((t, i) =>
+    (target === t || target.startsWith(t + " ")) &&
+    canBuild(target.slice(t.length).trimStart(), tiles.slice(0, i).concat(tiles.slice(i + 1))));
+}
+
 function checkExercise(where, c) {
   assert.ok(GRADED.includes(c.type), where + ": unknown exercise type " + c.type);
   switch (c.type) {
@@ -66,14 +74,7 @@ function checkExercise(where, c) {
       assert.ok(c.en, where + ": needs en");
       for (const t of c.extra || []) assert.ok(!c.tiles.includes(t), where + ": extra tile duplicates a real tile: " + t);
       const bag = c.tiles.concat(c.extra || []);
-      for (const alt of c.alt || []) {
-        const left = bag.slice();
-        for (const word of alt.split(" ")) {
-          const i = left.indexOf(word);
-          assert.ok(i >= 0, where + ": alt answer can't be built from tiles: " + alt);
-          left.splice(i, 1);
-        }
-      }
+      for (const alt of c.alt || []) assert.ok(canBuild(alt, bag), where + ": alt answer can't be built from tiles: " + alt);
       break;
     }
     case "sort":

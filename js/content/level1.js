@@ -84,7 +84,7 @@ KG.addLevel({
           type: "learn",
           title: "Questions and spelling traps",
           blocks: [
-            { p: "To ask a question, keep the exact same words and let your voice go **up** at the end. In writing, just add **?**" },
+            { p: "To ask a **yes/no** question, keep the exact same words and let your voice go **up** at the end. In writing, just add **?**" },
             { ex: [
               ["학생{이에요}?", "Are you a student?"],
               ["네, 학생{이에요}.", "Yes, I'm a student."],
@@ -92,17 +92,18 @@ KG.addLevel({
               ["사과{예요}.", "It's an apple."],
             ] },
             { tip: "**이거 뭐예요?** (*What is this?*) is one of the handiest phrases in Korean. Point at anything on a menu or in a shop and ask." },
-            { warn: "After a vowel it's **예요**, never ~~에요~~. Write 의사예요, not ~~의사에요~~. They sound almost the same, so even Koreans mix them up!" },
+            { warn: "After a **noun** ending in a vowel, it's **예요**, never ~~에요~~. Write 의사예요, not ~~의사에요~~. They sound almost the same, so even Koreans mix them up!" },
             { reveal: { q: "Deep dive: why does 이에요 shrink to 예요?", a: "예요 is a squashed 이에요. After a vowel, the 이 and 에 melt together: 의사 + 이에요 → **의사예요**. After a consonant the full 이에요 stays, and the 받침 slides into it when you speak: 책이에요 sounds like [채기에요]." } },
             { reveal: { q: "Deep dive: what about 입니다?", a: "In the news, in speeches and at job interviews you'll hear the formal **입니다**: 학생입니다, 의사입니다. It works after any noun, with no 받침 check. 이에요/예요 is the polite everyday version you'll use most." } },
           ],
         },
         {
           type: "build",
-          en: "I'm a teacher.",
-          tiles: ["저는", "선생님이에요."],
-          extra: ["선생님예요."],
-          explain: "선생**님** ends in ㅁ, a consonant, so it takes **이에요**.",
+          en: "I'm an office worker.",
+          tiles: ["저는", "회사원이에요."],
+          extra: ["회사원예요."],
+          alt: ["회사원이에요."],
+          explain: "회사**원** ends in ㄴ, a consonant, so it takes **이에요**.",
         },
         {
           type: "fix",
@@ -146,8 +147,8 @@ KG.addLevel({
         examples: [["저는 학생이에요.", "I'm a student."], ["이거 뭐예요?", "What is this?"], ["커피예요.", "It's coffee."]],
         tips: [
           "One form for I, you, he, she and they. No *a* or *the*.",
-          "Questions use the same words with a rising voice.",
-          "After a vowel it's **예요**, not ~~에요~~.",
+          "Yes/no questions use the same words with a rising voice.",
+          "After a noun ending in a vowel: **예요**, not ~~에요~~.",
           "Formal version: **입니다**, after any noun.",
         ],
       },
@@ -230,7 +231,7 @@ KG.addLevel({
             { ex: [["저{는} 학생이에요. 친구{는} 선생님이에요.", "I'm a student. My friend, on the other hand, is a teacher."]] },
             { p: "**2. “What about you?”** Add **요** after 은/는 to bounce a question back:" },
             { ex: [["저는 학생이에요. 준호 씨{는요}?", "I'm a student. What about you, Junho?"], ["커피{는요}?", "And coffee? / What about coffee?"]] },
-            { tip: "Koreans rarely say *you*. The word 당신 can sound cold, rude or even romantic! Use the person's name + **씨** instead: 준호 씨는요?" },
+            { tip: "Koreans rarely say *you*. The word 당신 can sound cold, rude or even romantic! For people around your age, use their name + **씨**: 준호 씨는요? For a teacher, boss or elder, use their title, like 선생님. And never put 씨 after your own name." },
             { warn: "Don't start every sentence with 저는. Once the topic is clear, drop it: 저는 민지예요. 학생이에요. Repeating 저는 sounds robotic." },
             { reveal: { q: "Deep dive: 은/는 or 이/가?", a: "Both can look like the *subject* in English, but they do different jobs. **은/는** sets the topic (known or contrasted info). **이/가** points at new information, or at *exactly who/what*. You'll meet 이/가 in the next two lessons." } },
           ],
@@ -248,7 +249,7 @@ KG.addLevel({
           q: "Minji says **저는 학생이에요.** Now she wants to ask whether Junho is one too. What does she say?",
           options: ["준호 씨는요?", "준호 씨예요?", "당신은요?"],
           answer: 0,
-          explain: "**~는요?** means *What about ~?* Using the name + 씨 is the polite way to say *you*.",
+          explain: "**~는요?** means *What about ~?* With someone your age, their name + 씨 is the polite way to say *you*.",
           why: {
             "준호 씨예요?": "That asks *Are you Junho?* She already knows his name!",
             "당신은요?": "Grammatically fine, but 당신 sounds cold or oddly intimate. Use his name + 씨.",
@@ -287,7 +288,7 @@ KG.addLevel({
         tips: [
           "Use it to introduce yourself and to set the topic.",
           "It also contrasts: *X is…, but Y is…*",
-          "Say the person's name + 씨 instead of *you*.",
+          "Instead of *you*: name + 씨 for peers, a title (선생님) for teachers and elders.",
           "저 = I (humble), 제 = my.",
         ],
       },
@@ -365,8 +366,8 @@ KG.addLevel({
         },
         {
           type: "fix",
-          sentence: "저는 선생님이 [아니예요].",
-          en: "I'm not a teacher.",
+          sentence: "저는 회사원이 [아니예요].",
+          en: "I'm not an office worker.",
           options: ["아니에요", "아니요"],
           answer: 0,
           explain: "Always **아니에요**. 아니요 on its own just means *No*.",
@@ -388,7 +389,7 @@ KG.addLevel({
               ["B: 네, 학생이 아니에요.", "B: Right. (Yes,) I'm not a student."],
               ["B: 아니요, 학생이에요!", "B: No, that's wrong. I am a student!"],
             ] },
-            { tip: "Think of **네** as *That's right* and **아니요** as *That's not right*. Then it always works." },
+            { tip: "Think of **네** as *That's right* and **아니요** as *That's not right*. (Heads-up for later: *Isn't it…?* questions like 맛있지 않아요? are answered 네, 맛있어요.)" },
           ],
         },
         {
@@ -579,10 +580,10 @@ KG.addLevel({
     extra: [
       {
         type: "choice",
-        q: "Pick the correct sentence: **“I'm not a doctor. I'm a teacher.”**",
-        options: ["저는 의사가 아니에요. 선생님이에요.", "저는 의사이 아니에요. 선생님이에요.", "저는 의사가 아니예요. 선생님예요.", "저가 의사가 아니에요. 선생님이에요."],
+        q: "Pick the correct sentence: **“I'm not a doctor. I'm an office worker.”**",
+        options: ["저는 의사가 아니에요. 회사원이에요.", "저는 의사이 아니에요. 회사원이에요.", "저는 의사가 아니예요. 회사원예요.", "저가 의사가 아니에요. 회사원이에요."],
         answer: 0,
-        explain: "의사 → **가 아니에요** (spelled 아니에요). 선생님 → **이에요**. And the topic is **저는**.",
+        explain: "의사 → **가 아니에요** (spelled 아니에요). 회사원 → **이에요**. And the topic is **저는**.",
       },
       {
         type: "build",
